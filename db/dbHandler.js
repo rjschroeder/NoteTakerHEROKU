@@ -10,7 +10,7 @@ let noteArray = [];
 //if there is nothing in the db or invalid data, an empty array is returned
 function parseNotes() {
     return new Promise(resolve => {
-        fs.readFile("./db.json"), "utf-8", (err, data) => {
+        fs.readFile("./db.json", "utf-8", (err, data) => {
             try {
                 resolve(JSON.parse(data));
             } catch (err) {
