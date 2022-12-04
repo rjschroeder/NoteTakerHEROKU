@@ -29,7 +29,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/note/notes', {
+  fetch('/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const getNotes = () =>
   });
 
 const saveNote = (note) =>
-  fetch('/note/notes', {
+  fetch('/api/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -125,7 +125,9 @@ const renderNoteList = async (notes) => {
 
   jsonNotes.forEach((note) => {
     //here is where I fill my array of titles of notes from storage
-    savedNotesRendered.push(note.title);
+    if (window.location.pathname === '/notes') {
+      savedNotesRendered.push(note.title);
+    }
     const li = createLi(note.title);
     li.dataset.note = JSON.stringify(note);
 
