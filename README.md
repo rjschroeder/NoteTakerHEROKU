@@ -22,8 +22,7 @@ Use this application as directed in the website.
 
 ![Screenshot of application](./applicationScreenshot.PNG)
 
-[Deployed Application]()
-^awaiting heroku credits to approve
+[Deployed Application](https://note-taker-redeploy.herokuapp.com/)
 
 ## Contributing
 
